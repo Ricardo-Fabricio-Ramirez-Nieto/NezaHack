@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<!--
+	Preserv por Servicio Social
+	ramptors.net/preserv | preserv@ramptors.net
+	License: ramptors.net/license
+-->
+<HTML>
+	<HEAD>
+		<TITLE>Preserv</TITLE>
+		<META charset="utf-8" />
+		<META name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<META name="description" content="" />
+		<META name="keywords" content="bamepoliux" />
+		<LINK rel="stylesheet" href="assets/css/main.css" />
+	
+
+
+		<SCRIPT LANGUAGE=JAVASCRIPT>
+
+
+			function valida_form1()
+
+				{ //valida_form1
+
+
+
+
+
+					if ( document.form1.me_NOM.value.length == 0 )
+
+						{
+
+							alert ( "El Campo NOMBRE NO Debe Estar Vacio!" );
+
+							document.form1.me_NOM.focus();
+
+							return false;
+
+						}
+
+					else 	
+
+						{
+					
+							me_NOMjs = /^([a-zA-Z/ /.])+$/;
+
+							if ( !me_NOMjs.test ( document.form1.me_NOM.value ) )
+
+								{
+
+								alert ( "El Campo NOMBRE " + document.form1.me_NOM.value + " Debe llevar solo LETRAS!" );
+
+								return false;
+
+								}
+
+
+						}
+
+
+
+
+
+
+
+
+
+					if ( document.form1.me_EM.value.length == 0 )
+
+						{
+
+							alert ( "El Campo CORREO ELECTRONICO NO Debe Estar Vacio!" );
+
+							document.form1.me_EM.focus();
+
+							return false;
+
+						}
+
+					else 	
+
+						{
+					
+me_EMjs = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+([a-zA-Z0-9\.]{0,3})+$/;
+
+							if ( !me_EMjs.test ( document.form1.me_EM.value ) )
+
+								{
+
+								alert ( "El Campo CORREO ELECTRONICO " + document.form1.me_EM.value + " NO es CORRECTO!" );
+
+								return false;
+
+								}
+
+
+						}
+
+
+
+
+
+
+
+
+
+
+
+
+
+					alert ( "GRACIAS POR HABER LLENADO ESTE FORMULARIO!" );
+
+					document.form1.submit();
+
+				} //valida_form1
+
+		</SCRIPT>
+
+
+
+	</HEAD>
+
+
+
+
+
+
+
+
+
+
+
+
+<BODY class="is-preload">
+
+
+<div class="inner">
+
+	<FORM METHOD="POST" NAME="form1" ID="form1" action="me_INSERT.php">
+
+		<div class="row gtr-uniform">
+
+
+
+		<div class="col-12">
+<INPUT TYPE="TEXT" NAME="me_NOM" ID="me_NOM" size="32" placeholder="Nombre:">
+		</div>
+
+
+
+		<div class="col-12">
+		<INPUT TYPE="TEXT" NAME="me_EM" ID="me_EM" size="32" placeholder="Correo Electr&oacute;nico:">
+		</div>
+
+
+
+
+		<div class="col-12">
+		<ul class="actions">
+			<li>
+
+<INPUT TYPE="button" VALUE="Insertar" CLASS="primary" ONCLICK="valida_form1()" />
+			
+			</li>
+
+			<li>
+				<INPUT TYPE="reset" VALUE="Limpiar" />
+			</li>
+
+		</ul>
+		</div>
+
+
+
+
+
+
+
+
+        </div>
+
+    </form>
+                        
+</div>
+
+</BODY>
+</HTML>
